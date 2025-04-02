@@ -18,6 +18,9 @@ public class SECalculator {
 
         double result = calculate(number1, number2, operator);
         System.out.println("Result: " + result);
+
+        // Demo-commit: Scanner needs to be closed to free resources!
+        scanner.close();
     }
 
     public static double getNumber(Scanner scanner, String prompt) {
