@@ -18,7 +18,7 @@ public class SECalculator {
         double number2 = getNumber(scanner, "Enter the second number: ");
 
         double result = calculate(number1, number2, operator);
-        System.out.println(number1 + operator + number2+ "=" + result);
+        System.out.println(number1 + operator + number2+ " = " + result);
 
         // Demo-commit: Scanner needs to be closed to free resources!
         scanner.close();
