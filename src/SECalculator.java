@@ -42,9 +42,7 @@ public class SECalculator {
             result = number1 - number2;
         } else if (operator.equals("/")) {
             result = number1 / number2;
-        }else if (operator.equals("*")) {
-            result = number1 * number2;
-        } else {
+        else {
             System.out.println("Unknown operator");
         }
 
