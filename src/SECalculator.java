@@ -41,8 +41,18 @@ public class SECalculator {
         } else if (operator.equals("-")) {
             result = number1 - number2;
         } else if (operator.equals("/")) {
+            if(number2==0){
+                System.out.println("Division by zero is not allowed.");
+                return Double.NaN; // Return NaN to indicate an error
+            }
             result = number1 / number2;
-        } else {
+        } else if (operator.equals("*")){
+            result=number1*number2;
+        }
+        else if(operator.equals("%")){
+            result=number1%number2;
+        }
+        else {
             System.out.println("Unknown operator");
         }
 
