@@ -45,6 +45,8 @@ public class SECalculator {
             result = number1 / number2;
         } else if (operator.equals("*")) {
             result = number1 * number2;
+        } else if (operator.equals("secret")) {
+            System.out.println("You found my secret!");
         } else {
             System.out.println("Unknown operator");
         }
