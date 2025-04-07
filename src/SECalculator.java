@@ -24,8 +24,15 @@ public class SECalculator {
     }
 
     public static double getNumber(Scanner scanner, String prompt) {
-        System.out.print(prompt);
-        return scanner.nextDouble();
+        while (true) {
+            System.out.print(prompt);
+            if (scanner.hasNextDouble()) {
+                return scanner.nextDouble();
+            } else {
+                System.out.println("Invalid input. Please enter a valid number.");
+                scanner.next(); // Consume invalid input
+            }
+        }
     }
 
     public static String getOperator(Scanner scanner) {
