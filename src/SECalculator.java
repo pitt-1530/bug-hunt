@@ -44,7 +44,9 @@ public class SECalculator {
         } else if (operator.equals("/")) {
             result = number1 / number2;
         } else if (operator.equals("//")) {
-            result = Math.floor(number1/number2);
+            result = Math.floor(number1 / number2);
+        } else if (operator.equals("%")) {
+            result = number1 % number2;
         } else {
             System.out.println("Unknown operator");
         }
