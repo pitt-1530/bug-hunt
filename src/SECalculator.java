@@ -12,7 +12,7 @@ public class SECalculator {
 
         System.out.println("Welcome to SECalculator!");
 
-        double number1 = getNumber(scanner, "Enter the first number: ");
+        double number1 = getNumber(scanner, "Enter the 1st number: ");
         String operator = getOperator(scanner);
         double number2 = getNumber(scanner, "Enter the second number: ");
 
