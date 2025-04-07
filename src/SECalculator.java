@@ -29,7 +29,7 @@ public class SECalculator {
     }
 
     public static String getOperator(Scanner scanner) {
-        System.out.print("Enter operator (+ or - or /): ");
+        System.out.print("Enter operator (+, -, *, or /): ");
         return scanner.next();
     }
 
@@ -42,6 +42,8 @@ public class SECalculator {
             result = number1 - number2;
         } else if (operator.equals("/")) {
             result = number1 / number2;
+        }else if (operator.equals("*")) {
+            result = number1 * number2;
         } else {
             System.out.println("Unknown operator");
         }
