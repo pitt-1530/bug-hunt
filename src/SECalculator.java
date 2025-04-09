@@ -41,7 +41,12 @@ public class SECalculator {
         } else if (operator.equals("-")) {
             result = number1 - number2;
         } else if (operator.equals("/")) {
-            result = number1 / number2;
+            if (number2 == 0) {
+                System.out.println("Divide By Zero Error");
+            }
+            else {
+                result = number1 / number2;
+            }
         } else {
             System.out.println("Unknown operator");
         }
