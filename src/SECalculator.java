@@ -36,14 +36,19 @@ public class SECalculator {
     public static double calculate(double number1, double number2, String operator) {
         double result = 0;
 
-        if (operator.equals("+")) {
-            result = number1 + number2;
-        } else if (operator.equals("-")) {
-            result = number1 - number2;
-        } else if (operator.equals("/")) {
-            result = number1 / number2;
-        } else {
-            System.out.println("Unknown operator");
+        switch (operator) {
+            case "+": 
+                result = number1 + number2;
+                break;
+            case "-": 
+                result = number1 - number2;
+                break;
+            case "/": 
+                result = number1 / number2;
+                break;
+            default:
+                System.out.println("Unknown operator");
+                break;
         }
 
         return result;
