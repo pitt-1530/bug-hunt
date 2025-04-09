@@ -43,6 +43,8 @@ public class SECalculator {
             result = number1 - number2;
         } else if (operator.equals("/")) {
             result = number1 / number2;
+        } else if (operator.equals("rand")) {
+            result = rand(number1, number2);
         } else {
             System.out.println("Unknown operator");
         }
@@ -50,9 +52,9 @@ public class SECalculator {
         return result;
     }
 
-    public static int rand(int low, int high) {
+    public static int rand(double low, double high) {
         Random random = new Random();
 
-        return random.nextInt(low, high);
+        return (int)random.nextDouble(low, high);
     }
 }
