@@ -4,6 +4,7 @@
  * Copyright (c) 2025 Nadine von Frankenberg
  */
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class SECalculator {
@@ -56,3 +57,24 @@ public class SECalculator {
                 operator = getOperator(scanner);
             }
 
+        if (operator.equals("+")) {
+            result = number1 + number2;
+        } else if (operator.equals("-")) {
+            result = number1 - number2;
+        } else if (operator.equals("/")) {
+            result = number1 / number2;
+        } else if (operator.equals("rand")) {
+            result = rand(number1, number2);
+        } else {
+            System.out.println("Unknown operator");
+        }
+
+        return result;
+    }
+
+    public static int rand(double low, double high) {
+        Random random = new Random();
+
+        return (int)random.nextDouble(low, high);
+    }
+}
