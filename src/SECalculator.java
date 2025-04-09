@@ -11,13 +11,28 @@ public class SECalculator {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to SECalculator!");
+        boolean again = true;
 
-        double number1 = getNumber(scanner, "Enter the first number: ");
-        String operator = getOperator(scanner);
-        double number2 = getNumber(scanner, "Enter the second number: ");
+        while (again) {
+            double number1 = getNumber(scanner, "Enter the first number: ");
+            String operator = getOperator(scanner);
+            double number2 = getNumber(scanner, "Enter the second number: ");
 
-        double result = calculate(number1, number2, operator);
-        System.out.println("Result: " + result);
+            double result = calculate(number1, number2, operator);
+            System.out.println("Result: " + result);
+
+            String another = "BLAH";
+            while (!another.equals("yes") && !another.equals("no")) {
+                System.out.print("Would you like to do another operation? (yes/no): ");
+                another = scanner.next();
+
+                System.out.println("another debug: " + another);
+
+                if (another.equals("no")) {
+                    again = false;
+                }
+            }
+        }
 
         // Scanner needs to be closed to free resources
         scanner.close();
