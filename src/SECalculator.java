@@ -42,7 +42,10 @@ public class SECalculator {
             result = number1 - number2;
         } else if (operator.equals("/")) {
             result = number1 / number2;
-        } else if (operator.equals("*")) {  
+        } else if (operator.equals("*")) {
+            if (Double.isInfinite(number1 * number2)) {
+                System.out.println("Warning: Result may overflow");
+            }
             result = number1 * number2;
         } else {
             System.out.println("Unknown operator");
