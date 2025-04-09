@@ -22,6 +22,7 @@ public class SECalculator {
 
         // Scanner needs to be closed to free resources
         scanner.close();
+        System.out.println("Thank you for using SECalculator!");
     }
 
     public static double getNumber(Scanner scanner, String prompt) {
