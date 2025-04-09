@@ -29,23 +29,25 @@ public class SECalculator {
     }
 
     public static String getOperator(Scanner scanner) {
-        System.out.print("Enter operator (+ or - or /): ");
+        System.out.print("Enter operator (+ or - or / or *): ");
         return scanner.next();
     }
 
     public static double calculate(double number1, double number2, String operator) {
         double result = 0;
-
+    
         if (operator.equals("+")) {
             result = number1 + number2;
         } else if (operator.equals("-")) {
             result = number1 - number2;
         } else if (operator.equals("/")) {
             result = number1 / number2;
+        } else if (operator.equals("*")) {  
+            result = number1 * number2;
         } else {
             System.out.println("Unknown operator");
         }
-
+    
         return result;
     }
 }
