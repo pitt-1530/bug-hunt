@@ -36,6 +36,7 @@ public class SECalculator {
     public static double calculate(double number1, double number2, String operator) {
         double result = 0;
 
+        // Changed the if statements to switch cases
         switch (operator) {
             case "+": 
                 result = number1 + number2;
