@@ -12,15 +12,28 @@ public class SECalculator {
 
         System.out.println("Welcome to SECalculator!");
 
-        double number1 = getNumber(scanner, "Enter the first number: ");
-        String operator = getOperator(scanner);
-        double number2 = getNumber(scanner, "Enter the second number: ");
+        while (true){
+            System.out.print("Enter the first number (or type 'clear'): ");
+            String input1 = scanner.next();
+            if (input1.equalsIgnoreCase("clear")) continue;
 
-        double result = calculate(number1, number2, operator);
-        System.out.println("Result: " + result);
+            double number1 = Double.parseDouble(input1);
 
-        // Scanner needs to be closed to free resources
-        scanner.close();
+            System.out.print("Enter operator (+ or - or /): ");
+            String operator = scanner.next();
+            if (operator.equalsIgnoreCase("clear")) continue;
+
+            System.out.print("Enter the second number (or type 'clear'): ");
+            String input2 = scanner.next();
+            if (input2.equalsIgnoreCase("clear")) continue;
+
+            double number2 = Double.parseDouble(input2);
+
+            double result = calculate(number1, number2, operator);
+            System.out.println("Result: " + result);
+            break;
+
+        }
     }
 
     public static double getNumber(Scanner scanner, String prompt) {
