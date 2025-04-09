@@ -44,6 +44,8 @@ public class SECalculator {
             // Catch divisions by 0
             if (number2 == 0) {
                 System.out.println("Divide By Zero Error");
+                //terminate program 
+                exit();
             }
             else {
                 result = number1 / number2;
