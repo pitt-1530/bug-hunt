@@ -29,7 +29,7 @@ public class SECalculator {
     }
 
     public static String getOperator(Scanner scanner) {
-        System.out.print("Enter operator (+ or - or /): ");
+        System.out.print("Enter operator (+ or - or / or %): ");
         return scanner.next();
     }
 
