@@ -45,7 +45,7 @@ public class SECalculator {
             if (number2 == 0) {
                 System.out.println("Divide By Zero Error");
                 //terminate program 
-                exit();
+                System.exit(0);
             }
             else {
                 result = number1 / number2;
