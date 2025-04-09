@@ -38,6 +38,7 @@ public class SECalculator {
         boolean validOperator = true;
         Scanner scanner = new Scanner(System.in);
 
+        // loops on invalid input and user can input new operator
         while(validOperator) {
             if (operator.equals("+")) {
                 validOperator = false;
