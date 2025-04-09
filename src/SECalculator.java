@@ -37,19 +37,22 @@ public class SECalculator {
 
     public static double calculate(double number1, double number2, String operator) {
         double result = 0;
+        boolean validOperator = true;
+        Scanner scanner = new Scanner(System.in);
 
-        if (operator.equals("+")) {
-            result = number1 + number2;
-        } else if (operator.equals("-")) {
-            result = number1 - number2;
-        } else if (operator.equals("/")) {
-            result = number1 / number2;
-        } else if (operator.equals("%")) {//this is where the mod operator was added
-            result = number1 % number2;
-        } else {
-            System.out.println("Unknown operator");
-        }
+        // loops on invalid input and user can input new operator
+        while(validOperator) {
+            if (operator.equals("+")) {
+                validOperator = false;
+                result = number1 + number2;
+            } else if (operator.equals("-")) {
+                validOperator = false;
+                result = number1 - number2;
+            } else if (operator.equals("/")) {
+                validOperator = false;
+                result = number1 / number2;
+            } else {
+                System.out.println("Unknown operator");
+                operator = getOperator(scanner);
+            }
 
-        return result;
-    }
-}
