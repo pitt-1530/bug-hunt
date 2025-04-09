@@ -43,30 +43,28 @@ public class SECalculator {
 
         // loops on invalid input and user can input new operator
         while(validOperator) {
-            if (operator.equals("+")) {
-                validOperator = false;
-                result = number1 + number2;
-            } else if (operator.equals("-")) {
-                validOperator = false;
-                result = number1 - number2;
-            } else if (operator.equals("/")) {
-                validOperator = false;
-                result = number1 / number2;
-            } else {
-                System.out.println("Unknown operator");
-                operator = getOperator(scanner);
-            }
-
-        if (operator.equals("+")) {
-            result = number1 + number2;
-        } else if (operator.equals("-")) {
-            result = number1 - number2;
-        } else if (operator.equals("/")) {
-            result = number1 / number2;
-        } else if (operator.equals("rand")) {
-            result = rand(number1, number2);
-        } else {
-            System.out.println("Unknown operator");
+            // Changed the if statements to switch cases
+            switch (operator) {
+              case "+": 
+                 result = number1 + number2;
+                 validOperator = false;
+                 break;
+              case "-": 
+                 result = number1 - number2;
+                 validOperator = false;
+                 break;
+              case "/": 
+                 result = number1 / number2;
+                 validOperator = false;
+                 break;
+              case "rand":
+                 result = rand(number1, number2);
+                 validOperator = false;
+                 break;
+              default:
+                 System.out.println("Unknown operator");
+                 operator = getOperator(scanner);
+                 break;
         }
 
         return result;
