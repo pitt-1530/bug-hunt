@@ -4,6 +4,7 @@
  * Copyright (c) 2025 Nadine von Frankenberg
  */
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class SECalculator {
@@ -48,4 +49,5 @@ public class SECalculator {
 
         return result;
     }
+
 }
