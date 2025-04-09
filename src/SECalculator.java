@@ -26,8 +26,10 @@ public class SECalculator {
     public static double getNumber(Scanner scanner, String prompt) {
         System.out.print(prompt);
         // through exception if input is not a number
-        try {return scanner.nextDouble();}
-        catch (Exception e){
+        try {
+            double number = scanner.nextDouble();
+            return number;
+        } catch (Exception e) {
             System.out.println("Invalid input. Please enter a number.");
             return getNumber(scanner, prompt);
         }
