@@ -50,4 +50,9 @@ public class SECalculator {
         return result;
     }
 
+    public static int rand(int low, int high) {
+        Random random = new Random();
+
+        return random.nextInt(low, high);
+    }
 }
