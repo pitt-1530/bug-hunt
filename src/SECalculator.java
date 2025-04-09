@@ -25,7 +25,7 @@ public class SECalculator {
 
     public static double getNumber(Scanner scanner, String prompt) {
         System.out.print(prompt);
-        // through exception if input is not a number 
+        // through exception if input is not a number
         try {
             double number = scanner.nextDouble();
             return number;
