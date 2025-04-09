@@ -50,7 +50,7 @@ public class SECalculator {
         } else if (operator.equals("%")) {//this is where the mod operator was added
             result = number1 % number2;
         } else {
-            System.out.println("Unknown operator");
+            System.out.println("Unknown operators");
             return null;
         }
 
