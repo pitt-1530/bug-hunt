@@ -26,8 +26,6 @@ public class SECalculator {
                 System.out.print("Would you like to do another operation? (yes/no): ");
                 another = scanner.next();
 
-                System.out.println("another debug: " + another);
-
                 if (another.equals("no")) {
                     again = false;
                 }
