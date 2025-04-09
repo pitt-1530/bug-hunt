@@ -4,7 +4,6 @@
  * Copyright (c) 2025 Nadine von Frankenberg
  */
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class SECalculator {
@@ -32,30 +31,12 @@ public class SECalculator {
     }
 
     public static String getOperator(Scanner scanner) {
-        System.out.print("Enter operator (+ or - or / or %): ");
+        System.out.print("Enter operator (+ or - or /): ");
         return scanner.next();
     }
 
     public static double calculate(double number1, double number2, String operator) {
         double result = 0;
-        boolean validOperator = true;
-        Scanner scanner = new Scanner(System.in);
-
-        // loops on invalid input and user can input new operator
-        while(validOperator) {
-            if (operator.equals("+")) {
-                validOperator = false;
-                result = number1 + number2;
-            } else if (operator.equals("-")) {
-                validOperator = false;
-                result = number1 - number2;
-            } else if (operator.equals("/")) {
-                validOperator = false;
-                result = number1 / number2;
-            } else {
-                System.out.println("Unknown operator");
-                operator = getOperator(scanner);
-            }
 
         if (operator.equals("+")) {
             result = number1 + number2;
@@ -63,18 +44,10 @@ public class SECalculator {
             result = number1 - number2;
         } else if (operator.equals("/")) {
             result = number1 / number2;
-        } else if (operator.equals("rand")) {
-            result = rand(number1, number2);
         } else {
             System.out.println("Unknown operator");
         }
 
         return result;
-    }
-
-    public static int rand(double low, double high) {
-        Random random = new Random();
-
-        return (int)random.nextDouble(low, high);
     }
 }
