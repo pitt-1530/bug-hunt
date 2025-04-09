@@ -5,6 +5,7 @@
  */
 
 import java.util.Scanner;
+import java.lang.Math;
 
 public class SECalculator {
     public static void main(String[] args) {
@@ -42,6 +43,10 @@ public class SECalculator {
             result = number1 - number2;
         } else if (operator.equals("/")) {
             result = number1 / number2;
+        } else if (operator.equals("//")) {
+            result = Math.floor(number1 / number2);
+        } else if (operator.equals("%")) {
+            result = number1 % number2;
         } else {
             System.out.println("Unknown operator");
         }
