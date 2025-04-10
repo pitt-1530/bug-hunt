@@ -18,8 +18,13 @@ public class SECalculator {
         String operator = getOperator(scanner);
         double number2 = getNumber(scanner, "Enter the second number: ");
 
-        double result = calculate(number1, number2, operator);
-        System.out.println("Result: " + result);
+        Double result = calculate(number1, number2, operator);
+        
+        if(result!=null){
+            System.out.println("Result: " + result);
+
+        }
+      
 
         // Scanner needs to be closed to free resources
         scanner.close();
@@ -36,7 +41,7 @@ public class SECalculator {
         return scanner.next();
     }
 
-    public static double calculate(double number1, double number2, String operator) {
+    public static Double calculate(double number1, double number2, String operator) {
         double result = 0;
         boolean validOperator = true;
         Scanner scanner = new Scanner(System.in);
@@ -66,7 +71,8 @@ public class SECalculator {
         } else if (operator.equals("rand")) {
             result = rand(number1, number2);
         } else {
-            System.out.println("Unknown operator");
+            System.out.println("Unknown operators");
+            return null;
         }
 
         return result;
