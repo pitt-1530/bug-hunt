@@ -14,9 +14,9 @@ public class SECalculator {
         System.out.println("Welcome to SECalculator!");
         System.out.println("|  _________________  |\n| | JO           0. | |\n| |_________________| |\n|  ___ ___ ___   ___  |\n| | 7 | 8 | 9 | | + | |\n| |___|___|___| |___| |\n| | 4 | 5 | 6 | | - | |\n| |___|___|___| |___| |\n| | 1 | 2 | 3 | | x | |\n| |___|___|___| |___| |\n| | . | 0 | = | | / | |\n| |___|___|___| |___| |\n|_____________________|");
 
-        double number1 = getNumber(scanner, "Enter the first number: ");
+        double number1 = getNumber(scanner, "Enter the 1st number: ");
         String operator = getOperator(scanner);
-        double number2 = getNumber(scanner, "Enter the second number: ");
+        double number2 = getNumber(scanner, "Enter the 2nd number: ");
 
         double result = calculate(number1, number2, operator);
         System.out.println("Result: " + result);
